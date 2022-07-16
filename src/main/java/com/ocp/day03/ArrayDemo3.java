@@ -17,5 +17,11 @@ public class ArrayDemo3 {
             sum += scores[i];
         }
         System.out.println("總分: " + sum);
+        // 計算總分 II (使用 for-in(each))
+        int sum2 = 0;
+        for(int score : scores) {
+            sum2 += score;
+        }
+        System.out.println("總分: " + sum2);
     }
 }
