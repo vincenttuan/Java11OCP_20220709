@@ -9,6 +9,10 @@ public class ArrayDemo6 {
         System.out.println(Arrays.toString(scores));
         // 印出及格的分數的平均
         // 使用 Java stream
-        
+        double avg = Arrays.stream(scores)
+                           .filter(score -> score >= 60)
+                           .average() // 取得平均物件
+                           .getAsDouble(); // 取得平均物件的內容值
+        System.out.println("及格的分數的平均: " + avg);                   
     }
 }
