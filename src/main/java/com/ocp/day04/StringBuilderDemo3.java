@@ -7,9 +7,12 @@ public class StringBuilderDemo3 {
         String s = "";
         System.out.println(s + ", " + s.length());
         
+        // StringBuilder 的 equals 實作內容是使用 ==
         System.out.println(sb.equals(s));
         System.out.println(sb.toString().equals(s));  // 將 sb 轉為字串之後再與 s 相比
         System.out.println(sb.toString().equals(s.toString()));
+        System.out.println(sb.equals(new StringBuilder(s))); // false
+        
         
         
     }
