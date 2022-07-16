@@ -17,9 +17,9 @@ public class ArrayDemo4 {
                 pass_length++;
             }
         }
-        double avg = (double)sum / pass_length;
+        double avg = (double)sum / pass_length; // 及格分數的平均
         System.out.println("及格分數的元素個數:" + pass_length);
-        System.out.println("及格分數的總平均:" + avg);
+        System.out.println("及格分數的平均:" + avg);
         
     }
 }
