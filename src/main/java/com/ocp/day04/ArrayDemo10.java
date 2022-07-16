@@ -9,9 +9,14 @@ public class ArrayDemo10 {
         System.out.println(Arrays.toString(names));
         // 印出每一個元素字串長度為何?
         Arrays.stream(names)
-              .map(name -> (name == null)? 0 : name.length())
+              .mapToInt(name -> (name == null)? 0 : name.length())
               .forEach(name -> System.out.print(name + " "));
         System.out.println();
         // 請求出平均字串長度為何?
+        double avg = Arrays.stream(names)
+                           .mapToInt(name -> (name == null) ? 0 : name.length())
+                           .average()
+                           .getAsDouble();
+        System.out.println("平均字串長度: " + avg);
     }
 }
