@@ -4,7 +4,12 @@ import java.util.Arrays;
 
 public class ArrayDemo1 {
     public static void main(String[] args) {
-        int[] scores = new int[3];
+        int x;  
+        x = 10; 
+        System.out.println("x=" + x); // 區域變數在使用之前必須要給定初始值
+        
+        // 特例: 若區域變數是陣列, 則 Java 會自動給定初始值
+        int[] scores = new int[3];  // 會自動有初始值 [0, 0, 0]
         // 陣列長度
         System.out.println("陣列長度:" + scores.length);
         // 內容(一個一個顯示)
