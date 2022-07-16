@@ -8,5 +8,7 @@ public class ArrayDemo5 {
         int[] scores = {95, 45, 37, 81, 75};
         System.out.println(Arrays.toString(scores));
         // 印出及格的分數的平均
+        // 使用 Java stream
+        Arrays.stream(scores).forEach(score -> System.out.println(score));
     }
 }
