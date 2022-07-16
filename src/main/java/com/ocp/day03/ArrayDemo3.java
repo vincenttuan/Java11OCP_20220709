@@ -23,5 +23,8 @@ public class ArrayDemo3 {
             sum2 += score;
         }
         System.out.println("總分: " + sum2);
+        // 計算總分 III (使用 Java 8 stream 串流)
+        int sum3 = Arrays.stream(scores).sum();
+        System.out.println("總分: " + sum3);
     }
 }
