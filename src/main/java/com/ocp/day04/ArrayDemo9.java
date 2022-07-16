@@ -14,6 +14,8 @@ public class ArrayDemo9 {
             String name = names[i];  // 取得字串元素
             int lens = name.length(); // 取得字串元素的長度
             sum += lens;
+            // log
+            System.out.printf("%s length: %d\n", name, lens);
         }
         System.out.println("字串元素總長度: " + sum);
         double avg = (double)sum/names.length;
