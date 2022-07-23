@@ -10,7 +10,7 @@ public class IntegerArrayDemo2 {
         double avg = Stream.of(scores)
                            .flatMap(Arrays::stream)  // array -> Arrays.stream(array)
                            .filter(data -> data != null)
-                           .mapToInt(Integer::valueOf)
+                           .mapToInt(data -> data.intValue())
                            .average()
                            .getAsDouble();
         System.out.println(avg);
