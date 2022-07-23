@@ -16,8 +16,9 @@ public class AutoBoxingUnboxing {
         Integer a = 10;
         Integer b = Integer.valueOf(20);
         int c = 30;
-        int result1 = a + b + c;
-        Integer result2 = a + b + c;
+        int d = Integer.parseInt("40");  // 字串轉數字
+        int result1 = a + b + c + d;
+        Integer result2 = a + b + c + d;
         System.out.println(result1);
         System.out.println(result2);
         
