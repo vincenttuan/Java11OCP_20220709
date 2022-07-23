@@ -25,5 +25,15 @@ public class MultiArrayDemo4 {
                 System.out.printf("m[%d][%d]: %d\n", i, k, m[i][k]);
             }
         }
+        
+        // 透過 Arrays.toString(一維陣列)
+        // 注意: Arrays.toString(一維陣列) 只支援一維陣列
+        for(int i=0 ; i<m.length ; i++) {
+            System.out.printf("m[%d]: %s\n", i, Arrays.toString(m[i]));
+        }
+        for(int[] array : m) {
+            System.out.println(Arrays.toString(array));
+        }
+        
     }
 }
