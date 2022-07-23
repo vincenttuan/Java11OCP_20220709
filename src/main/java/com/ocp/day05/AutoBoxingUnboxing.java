@@ -12,6 +12,15 @@ public class AutoBoxingUnboxing {
         int x2 = num2; // 編譯器會自動轉為 num2.intValue(), auto-unboxing 自動拆箱
         System.out.println(x2); 
         
+        // 混合計算
+        Integer a = 10;
+        Integer b = Integer.valueOf(20);
+        int c = 30;
+        int result1 = a + b + c;
+        Integer result2 = a + b + c;
+        System.out.println(result1);
+        System.out.println(result2);
         
     }
 }
+
