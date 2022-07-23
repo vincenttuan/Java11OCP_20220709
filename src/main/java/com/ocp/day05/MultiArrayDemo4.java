@@ -20,6 +20,10 @@ public class MultiArrayDemo4 {
             }
         }
         // 將資料透過 for-loop 反序印出
-        
+        for(int i=m.length-1 ; i >= 0 ; i--) {
+            for(int k=m[i].length-1 ; k >= 0 ; k--) {
+                System.out.printf("m[%d][%d]: %d\n", i, k, m[i][k]);
+            }
+        }
     }
 }
