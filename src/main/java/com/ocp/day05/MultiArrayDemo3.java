@@ -1,5 +1,7 @@
 package com.ocp.day05;
 
+import java.util.Arrays;
+
 public class MultiArrayDemo3 {
     public static void main(String[] args) {
         // 多維陣列的初始值
@@ -15,5 +17,9 @@ public class MultiArrayDemo3 {
         System.out.println("m[1][0]: " + m[1][0]);
         System.out.println("m[1][1]: " + m[1][1]);
         System.out.println("m[1][2]: " + m[1][2]);
+        
+        // 利用 Arrays.toString() 將一維陣列的內容以字串型態呈現
+        System.out.println("m[0] 內的資料內容: " + Arrays.toString(m[0]));
+        System.out.println("m[1] 內的資料內容: " + Arrays.toString(m[1]));
     }
 }
