@@ -13,5 +13,13 @@ public class MultiArrayDemo4 {
                 System.out.printf("m[%d][%d]: %d\n", i, k, m[i][k]);
             }
         }
+        // 將資料透過 for-each(in) 依序印出
+        for(int[] array : m) {
+            for(int data : array) {
+                System.out.println(data);
+            }
+        }
+        // 將資料透過 for-loop 反序印出
+        
     }
 }
