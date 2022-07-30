@@ -15,5 +15,8 @@ public class ComputerTest {
         System.out.printf("RAM capacity: %,d $%,d\n", computer.ram.capacity, computer.ram.price);
         System.out.printf("SSD size: %,d $%,d\n", computer.ssd.size, computer.ssd.price);
         System.out.printf("Power: %dW $%,d\n", computer.power, computer.price);
+        // total price
+        int totalPrice = computer.cpu.price + computer.ram.price + computer.ssd.price + computer.price;
+        System.out.printf("Total: $%,d\n", totalPrice);
     }
 }
