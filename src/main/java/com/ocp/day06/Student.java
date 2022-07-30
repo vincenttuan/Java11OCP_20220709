@@ -10,6 +10,12 @@ public class Student {
         this.name = name;
         this.test = test;
     }
+    
+    public Student(String name, String subjectName, Integer score) {
+        this.name = name;
+        Test test = new Test(subjectName, score);
+        this.test = test;
+    }
 
     public String getName() {
         return name;
