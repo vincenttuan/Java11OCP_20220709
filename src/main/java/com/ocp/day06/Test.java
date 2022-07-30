@@ -32,4 +32,12 @@ public class Test {
         }
         return score >= 60;
     }
+    
+    // 改寫 toString()
+    @Override
+    public String toString() {
+        String message = String.format("科目: %s\n分數: %d\n及格: %b\n", 
+                                       subjectName, getScore(), isPass());
+        return message;
+    }
 }
