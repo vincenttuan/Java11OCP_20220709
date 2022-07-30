@@ -21,6 +21,9 @@ public class Test {
     }
 
     public void setScore(Integer score) {
+        if(score == null) {
+            return; // 不回傳任何東西,並停止方法
+        }
         if(score >= 0 && score <= 100) {
             this.score = score;
         }
