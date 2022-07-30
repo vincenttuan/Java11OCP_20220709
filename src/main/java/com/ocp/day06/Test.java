@@ -14,4 +14,11 @@ public class Test {
             this.score = score;
         }
     }
+    
+    public Boolean isPass() {
+        if (score == null) {
+            return null;
+        }
+        return score >= 60;
+    }
 }
