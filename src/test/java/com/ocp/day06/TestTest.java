@@ -16,6 +16,6 @@ public class TestTest {
         //------------------------------------------------
         Test test3 = new Test("英文", 80); // 建構時帶入二個參數
         System.out.println(test3.toString()); // 印出物件資料(以字串方式呈現)
-        
+        System.out.println(test3); // 相當於 test3.toString()
     }
 }
