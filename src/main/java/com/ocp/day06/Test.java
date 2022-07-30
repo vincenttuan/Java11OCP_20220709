@@ -36,7 +36,7 @@ public class Test {
     // 改寫 toString()
     @Override
     public String toString() {
-        String message = String.format("科目: %s\n分數: %d\n及格: %s\n", 
+        String message = String.format("科目: %s 分數: %d 及格: %s", 
                                        subjectName, getScore(), isPass());
         return message;
     }
