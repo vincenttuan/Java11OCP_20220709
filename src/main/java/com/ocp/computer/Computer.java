@@ -5,4 +5,5 @@ public class Computer extends Machine {
     public RAM ram;
     public SSD ssd;
     
+    
 }
