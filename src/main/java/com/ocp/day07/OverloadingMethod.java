@@ -8,13 +8,16 @@ public class OverloadingMethod {
         System.out.println("B");
     }
     */
-    public void input(double x) {
+    public void input(float x) {
         System.out.println("C");
+    }
+    public void input(double x) {
+        System.out.println("D");
     }
     
     public static void main(String[] args) {
         OverloadingMethod om = new OverloadingMethod();
         //om.input(Integer.valueOf(0));
-        om.input(0);
+        om.input(10);
     }
 }
