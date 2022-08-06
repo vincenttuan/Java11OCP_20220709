@@ -1,10 +1,12 @@
 package com.ocp.day07;
 class Foo {
+    int x = 100;
     void aaa() {System.out.println("甲");}
     void bbb() {System.out.println("乙");}
 }
 class Bar extends Foo {
-    void aaa() {System.out.println("丙");}
+    int x = 200;
+    void aaa() {System.out.println("丙" + x);}
     void ccc() {System.out.println("戊");}
 }
 class Fun extends Foo {
@@ -16,6 +18,7 @@ class Fun extends Foo {
 public class PolyTest {
     public static void main(String[] args) {
         Foo f1 = new Bar();
+        System.out.println(f1.x); // 直接取用 Foo 物件的 x 值
         f1.aaa();
         f1.bbb();
         //f1.ccc(); // 無法調用 ccc()
