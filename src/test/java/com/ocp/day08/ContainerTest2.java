@@ -41,5 +41,11 @@ public class ContainerTest2 {
         
         // 在所有的容器中小容器的容量加總為何 = ?
         int sum3 = Arrays.stream(containers)
+                         .filter(container -> container instanceof AContainer)
+                         //.peek(container -> container.printName())
+                         .mapToInt(container -> container.capacity())
+                         //.peek(System.out::println) // 將每一個元素印出
+                         .sum();  
+        System.out.println(sum3);
     }
 }
