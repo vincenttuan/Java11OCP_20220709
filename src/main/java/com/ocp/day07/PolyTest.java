@@ -19,6 +19,7 @@ public class PolyTest {
     public static void main(String[] args) {
         Foo f1 = new Bar();
         System.out.println(f1.x); // 直接取用 Foo 物件的 x 值
+        System.out.println(((Bar)f1).x);
         f1.aaa();
         f1.bbb();
         //f1.ccc(); // 無法調用 ccc()
