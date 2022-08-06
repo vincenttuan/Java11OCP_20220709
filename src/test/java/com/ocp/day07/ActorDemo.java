@@ -6,10 +6,11 @@ public class ActorDemo {
         Actor actor1 = new Actor();  // 建立一般角色
         Actor actor2 = new Hunter(); // 建立獵人角色
         Actor actor3 = new CityHunter(); // 建立城市獵人角色
+        Actor actor4 = new Magician(); // 建立魔法師
         
-        actor1.attack();
-        actor2.attack();
-        actor3.attack();
-        
+        Actor[] actors = {actor1, actor2, actor3, actor4};
+        for(Actor actor : actors) {
+            actor.attack();
+        }
     }
 }
