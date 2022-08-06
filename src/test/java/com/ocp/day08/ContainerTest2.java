@@ -38,5 +38,6 @@ public class ContainerTest2 {
                          .mapToInt(container -> container.capacity())
                          .sum();
         System.out.println(sum2);
+        
     }
 }
