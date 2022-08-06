@@ -1,7 +1,7 @@
 package com.ocp.day08;
 
 // 鋁箔包
-public class PoilPack extends AContainer {
+public class FoilPack extends AContainer {
 
     @Override
     public void printName() {

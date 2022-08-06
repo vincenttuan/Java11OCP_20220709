@@ -3,7 +3,7 @@ package com.ocp.day08;
 public class ContainerTest {
     public static void main(String[] args) {
         Container c1 = new Bottle();
-        Container c2 = new PoilPack();
+        Container c2 = new FoilPack();
         
         c1.printName();
         System.out.println(c1.capacity());
