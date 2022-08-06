@@ -27,5 +27,16 @@ public class ContainerTest2 {
             System.out.printf("%dml ", container.capacity());
             container.printName();
         });
+        // 所有容器容量加總為何?
+        int sum = 0;
+        for(Container container : containers) {
+            sum += container.capacity();
+        }
+        System.out.println(sum);
+        // 所有容器容量加總為何? Java 8 Stream
+        int sum2 = Arrays.stream(containers)
+                         .mapToInt(container -> container.capacity())
+                         .sum();
+        System.out.println(sum2);
     }
 }
