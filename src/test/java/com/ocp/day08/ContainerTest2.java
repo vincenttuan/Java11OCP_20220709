@@ -39,5 +39,7 @@ public class ContainerTest2 {
                          .sum();
         System.out.println(sum2);
         
+        // 在所有的容器中小容器的容量加總為何 = ?
+        int sum3 = Arrays.stream(containers)
     }
 }
