@@ -8,5 +8,6 @@ public class FunctionDemo2 {
         BiConsumer<String, Integer> biConsumer = 
                 (name, cost) -> System.out.printf("品名: %s 成本:$%d 價格:$%d\n", name, cost, cost*15);
         biConsumer.accept("冬瓜茶", 2);
+        
     }
 }
