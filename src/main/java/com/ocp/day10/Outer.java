@@ -42,10 +42,18 @@ public class Outer {
     
     // 在物件方法中有內部類別-該內部稱為方法內部類別
     public void foo() {
+        final int x = 100; // final 區域變數
+        int y = 200; // 看似一般區域變數
+                     // 若方法內部類別有使用則在編譯時期會修飾成
+                     // final int y = 200;
+        // y = 300;  // 若有寫此行, 則編譯時期無法加入 final 修飾
+                     // 則方法內部類別中就無法使用 y
         // 方法內部類別(此類別上不可以加入權限)
         class MInner {
             public void print() {
                 System.out.println("C");
+                System.out.println(x);
+                System.out.println(y);
             }
         }
         // 在方法中自行建立物件與操作
