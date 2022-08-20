@@ -15,11 +15,15 @@ public class Outer {
             System.out.println(Outer.sx);
             System.out.println(Outer.SInner.x);
             System.out.println(SInner.x);
+            
+            SInner sinner = new SInner();
+            System.out.println(sinner.y);
         }
     }
     
     // 靜態內部類別
     public static class SInner {
+        int y = 10;
         static int x = 8;
         public static void print() {
             System.out.println("B");
