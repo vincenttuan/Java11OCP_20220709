@@ -14,12 +14,14 @@ class BookImpl implements Book {
 
 // 方法參考的應用
 public class MethodReference {
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         // 一般方式
         Book b1 = new BookImpl();
+        System.out.println(b1.getClass());
         b1.print();
-        // 使用 :: 建立實體
+        // 使用 :: 建立 MethodReference 實體
         Book b2 = BookImpl::new;
-        b2.print();
+        System.out.println(b2.getClass());
     }
 }
