@@ -27,6 +27,8 @@ public class Outer {
         static int x = 8;
         public static void print() {
             System.out.println("B");
+            System.out.println(x);
+            System.out.println(Outer.sx);
         }
     }
     
