@@ -1,6 +1,8 @@
 package com.ocp.day11;
 
 import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.ObjIntConsumer;
 
 public class FunctionDemo2 {
@@ -16,5 +18,15 @@ public class FunctionDemo2 {
         ObjIntConsumer<String> objIntConsumer = 
                 (name, cost) -> System.out.printf("品名: %s 成本:$%d 價格:$%d\n", name, cost, cost*15);
         objIntConsumer.accept("冬瓜茶", 2);
+        
+        // BiFunction<T, U, R>
+        // R apply(T t, U u)
+        BiFunction<Double, Double, Double> biFunction = (h, w) -> w / Math.pow(h/100, 2);
+        System.out.println("BMI: " + biFunction.apply(170.0, 60.0));
+        
+        // BinaryOperator<T> 相當於 BiFunction<T, T, T>
+        BinaryOperator<Double> binaryOperator = (h, w) -> w / Math.pow(h/100, 2);
+        System.out.println("BMI: " + binaryOperator.apply(170.0, 60.0));
+        
     }
 }
