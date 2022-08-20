@@ -23,6 +23,9 @@ public class Outer {
                 System.out.println("C");
             }
         }
+        // 在方法中自行建立物件與操作
+        MInner minner = new MInner();
+        minner.print();
     }
     
 }
