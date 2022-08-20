@@ -4,6 +4,7 @@ import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.ObjIntConsumer;
+import java.util.function.UnaryOperator;
 
 public class FunctionDemo2 {
     public static void main(String[] args) {
@@ -27,6 +28,11 @@ public class FunctionDemo2 {
         // BinaryOperator<T> 相當於 BiFunction<T, T, T>
         BinaryOperator<Double> binaryOperator = (h, w) -> w / Math.pow(h/100, 2);
         System.out.println("BMI: " + binaryOperator.apply(170.0, 60.0));
+        
+        // UnaryOperator<T> 相當於 Function<T, T>
+        // T apply(T t)
+        UnaryOperator<Double> unaryOperator = (r) -> r * r * Math.PI;
+        System.out.println(unaryOperator.apply(5.5));
         
     }
 }
