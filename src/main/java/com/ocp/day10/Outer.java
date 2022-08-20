@@ -29,6 +29,14 @@ public class Outer {
             System.out.println("B");
             System.out.println(x);
             System.out.println(Outer.sx);
+            
+            SInner sinner = new SInner();
+            System.out.println(sinner.y);
+            
+            Outer.Inner inner = new Outer().new Inner();
+            System.out.println(inner.x);
+            
+            
         }
     }
     
