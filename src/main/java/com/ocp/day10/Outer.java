@@ -13,6 +13,8 @@ public class Outer {
             System.out.println(this.x);
             System.out.println(Outer.this.x);
             System.out.println(Outer.sx);
+            System.out.println(Outer.SInner.x);
+            System.out.println(SInner.x);
         }
     }
     
