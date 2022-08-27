@@ -1,17 +1,20 @@
 package com.ocp.solid.lsp.sol;
 
-class A {
+interface Base {
+    int calc(int x, int y);
+}
+
+class A implements Base{
     public int calc(int x, int y) { // 加法功能
         return x + y;
     }
 }
 
-class B extends A {
+class B implements Base {
     A a = new A();
     public int calc_A(int x, int y) { // 加法功能
         return a.calc(x, y);
     }
-    
     public int calc(int x, int y) { // 減法功能
         return x - y;
     }
