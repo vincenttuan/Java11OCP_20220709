@@ -1,4 +1,4 @@
-package com.ocp.solid.lkp.before;
+package com.ocp.solid.lkp.sol;
 
 import com.ocp.solid.lkp.Wallet;
 
@@ -9,9 +9,11 @@ public class Customer {
         this.wallet = wallet;
     }
     
-    // 讓外界可以取得皮包
-    public Wallet getWallet() {
-        return wallet;
+    // 要求付款
+    public void getPayment(int payment) {
+        int total = wallet.getMoney();
+        total = total - payment;
+        wallet.setMoney(total);
     }
 
     @Override
