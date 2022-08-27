@@ -11,7 +11,7 @@ class A implements Base{
 }
 
 class B implements Base {
-    A a = new A();
+    A a = new A(); // 組合(在 B 中有 A)
     public int calc_A(int x, int y) { // 加法功能
         return a.calc(x, y);
     }
