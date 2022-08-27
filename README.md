@@ -1,5 +1,5 @@
 # Java11OCP_20220709
-<pre>
+
 下載檔案
 1. [Java JDK](https://www.openlogic.com/openjdk-downloads)
 
@@ -27,4 +27,4 @@ https://www.youtube.com/watch?v=4bsMydmxp64&feature=youtu.be
 Java物件導向設計原則 : 7 合成聚合復用原則
 https://www.youtube.com/watch?v=I0qyNT7efk8&feature=youtu.be
 
-</pre>
+
