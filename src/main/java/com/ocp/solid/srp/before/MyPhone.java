@@ -1,14 +1,9 @@
 package com.ocp.solid.srp.before;
 
 public interface MyPhone {
-    // 打電話
-    public void dial(String number);
-    
-    // 發送 SMS
-    public void send(String message);
-    
-    // 看直播
-    public void watch();
+    public void dial(String number); // 打電話
+    public void send(String message); // 發送 SMS
+    public void watch(); // 看直播
 }
 // 智慧電話, IPhone
 class IPhone implements MyPhone {
