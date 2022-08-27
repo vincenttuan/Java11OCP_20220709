@@ -2,13 +2,13 @@ package com.ocp.day12_equals;
 
 // 部門
 class Department {
-    private String depyName;
-    public Department(String depyName) {
-        this.depyName = depyName;
+    private String deptName;
+    public Department(String deptName) {
+        this.deptName = deptName;
     }
     @Override
     public String toString() {
-        return "部門{" + "部門名稱=" + depyName + '}';
+        return "部門{" + "部門名稱=" + deptName + '}';
     }
 }
 
