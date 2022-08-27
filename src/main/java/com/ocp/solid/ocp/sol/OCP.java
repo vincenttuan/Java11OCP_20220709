@@ -26,9 +26,9 @@ class Edit { // 編輯板 (不可改變)
 public class OCP {
     public static void main(String[] args) {
         Edit edit = new Edit();
-        edit.draw(new Rectangle());
-        edit.draw(new Traingle());
-        edit.draw(new Circle());
+        System.out.println(edit.draw(new Rectangle()));
+        System.out.println(edit.draw(new Traingle()));
+        System.out.println(edit.draw(new Circle()));
     }
 }
 
