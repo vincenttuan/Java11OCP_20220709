@@ -1,13 +1,13 @@
 # Java11OCP_20220709
 
 下載檔案
-1. Java JDK <br/>
+Java JDK <br/>
 https://www.openlogic.com/openjdk-downloads
 
-2. Apache Netbeans 14<br/>
+Apache Netbeans 14<br/>
 https://netbeans.apache.org/download/nb14/nb14.html
 
-3. Java物件導向設計原則 SOLID 5 + 2<br/>
+Java物件導向設計原則 SOLID 5 + 2<br/>
 Java物件導向設計原則 : 1 依賴反轉原則 Dependency inversion principle（DIP）<br/>
 https://www.youtube.com/watch?v=PF99BjCR0Mg&feature=youtu.be
 
