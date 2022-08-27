@@ -17,7 +17,11 @@ public class Ball {
         }
         return false;
     }
-    
+
+    @Override
+    public int hashCode() {
+        return 7 * 13 * price + color.hashCode();
+    }
     
     
     @Override
