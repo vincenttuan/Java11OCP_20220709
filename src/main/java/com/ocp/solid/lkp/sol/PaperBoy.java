@@ -2,14 +2,15 @@ package com.ocp.solid.lkp.sol;
 
 import java.util.List;
 
+// 送報生: 負責收款
 public class PaperBoy {
     // 有許多要收款的客戶
-    List<com.ocp.solid.lkp.before.Customer> customers = null;
-    public PaperBoy(List<com.ocp.solid.lkp.before.Customer> customers) {
+    List<Customer> customers = null;
+    public PaperBoy(List<Customer> customers) {
         this.customers = customers;
     }
     // 收集所有報費金額 $100
     public void collectMoney() {
-    
+        
     }
 }
