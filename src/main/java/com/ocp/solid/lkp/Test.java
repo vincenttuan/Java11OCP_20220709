@@ -1,6 +1,8 @@
-package com.ocp.solid.lkp.before;
+package com.ocp.solid.lkp;
 
 import com.ocp.solid.lkp.Wallet;
+import com.ocp.solid.lkp.sol.Customer;
+import com.ocp.solid.lkp.sol.PaperBoy;
 import java.util.Arrays;
 import java.util.List;
 

@@ -11,6 +11,9 @@ public class PaperBoy {
     }
     // 收集所有報費金額 $100
     public void collectMoney() {
-        
+        for(Customer customer : customers) {
+            // 請客戶付現金給我
+            customer.getPayment(100);
+        }
     }
 }
