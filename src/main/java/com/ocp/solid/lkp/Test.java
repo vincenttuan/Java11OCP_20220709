@@ -1,6 +1,6 @@
 package com.ocp.solid.lkp;
 
-import com.ocp.solid.lkp.Wallet;
+// 使用 LKP 原則
 import com.ocp.solid.lkp.sol.Customer;
 import com.ocp.solid.lkp.sol.PaperBoy;
 import java.util.Arrays;
