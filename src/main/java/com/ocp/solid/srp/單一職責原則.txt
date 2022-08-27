@@ -1,0 +1,3 @@
+單一職責原則 Single responsibility principle（SRP）
+就一個類別而言，應該僅有一個引起它變化的原因。簡單地說，就是一個類別應就只負責一項職責。
+
