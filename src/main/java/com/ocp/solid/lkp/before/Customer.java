@@ -1,5 +1,7 @@
 package com.ocp.solid.lkp.before;
 
+import com.ocp.solid.lkp.Wallet;
+
 public class Customer {
     private Wallet wallet;
 

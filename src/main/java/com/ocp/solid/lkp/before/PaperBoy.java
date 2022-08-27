@@ -1,5 +1,6 @@
 package com.ocp.solid.lkp.before;
 
+import com.ocp.solid.lkp.Wallet;
 import java.util.List;
 
 // 送報生: 負責收款

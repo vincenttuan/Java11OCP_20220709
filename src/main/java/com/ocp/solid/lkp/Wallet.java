@@ -1,4 +1,4 @@
-package com.ocp.solid.lkp.before;
+package com.ocp.solid.lkp;
 
 public class Wallet {
     private int money;
