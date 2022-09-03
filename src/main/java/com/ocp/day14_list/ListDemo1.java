@@ -2,7 +2,6 @@ package com.ocp.day14_list;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class ListDemo1 {
     public static void main(String[] args) {
