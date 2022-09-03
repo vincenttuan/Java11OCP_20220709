@@ -1,23 +1,24 @@
 package com.ocp.day13_set;
 
 public class Score {
-    private Integer score;
+    private Integer value;
 
-    public Score(Integer score) {
-        this.score = score;
+    public Score(Integer value) {
+        this.value = value;
     }
 
-    public Integer getScore() {
-        return score;
+    public Integer getValue() {
+        return value;
     }
 
-    public void setScore(Integer score) {
-        this.score = score;
+    public void setValue(Integer value) {
+        this.value = value;
     }
 
     @Override
     public String toString() {
-        return "Score{" + "score=" + score + '}';
+        return "Score{" + "value=" + value + '}';
     }
+    
     
 }

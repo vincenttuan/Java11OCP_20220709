@@ -32,6 +32,23 @@ public class SetDemo7 {
         System.out.println("max_age_name: " + max_age_name);
         
         // 找到最低分的人是誰 ?
+        // 1. 先找到最低分的分數
+        // 2. 再透過該分數找到人名
+        int min_score = students.stream()
+                                .mapToInt(s -> s.getScore().getValue())
+                                //.peek(System.out::println)
+                                .min()
+                                .getAsInt();
+        System.out.println("min_score: " + min_score);
+        
+        String min_score_name = students.stream()
+                                        .filter(s -> s.getScore().getValue() == min_score)
+                                        .findFirst()
+                                        .get() // 得到 student 物件
+                                        .getName(); // 取得人名
+        System.out.println("min_score_name: " + min_score_name);
+                
+        
         
     }
 }
