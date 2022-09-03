@@ -49,7 +49,21 @@ public class SetDemo7 {
         System.out.println("min_score_name: " + min_score_name);
         
         // 找出及格中分數最低的人名
+        int min_score_pass = students.stream()
+                                     .mapToInt(s -> s.getScore().getValue())
+                                     //.peek(System.out::println)
+                                     .filter(score -> score >= 60)
+                                     //.peek(System.out::println)
+                                     .min()
+                                     .getAsInt();
+        System.out.println("min_score_pass: " + min_score_pass);
         
+        String min_score_pass_name = students.stream()
+                                             .filter(s -> s.getScore().getValue() == min_score_pass)
+                                             .findFirst()
+                                             .get()
+                                             .getName();
+        System.out.println("min_score_pass_name: " + min_score_pass_name);
         
     }
 }
