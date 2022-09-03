@@ -47,7 +47,8 @@ public class SetDemo7 {
                                         .get() // 得到 student 物件
                                         .getName(); // 取得人名
         System.out.println("min_score_name: " + min_score_name);
-                
+        
+        // 找出及格中分數最低的人名
         
         
     }
