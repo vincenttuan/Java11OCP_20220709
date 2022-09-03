@@ -18,7 +18,7 @@ public class SetDemo6 {
         int sum = scores.stream()
                         .filter(num -> num instanceof Integer)  // 100, 80, 90
                         .peek(num -> System.out.println(num))
-                        .mapToInt(num -> Integer.parseInt(num+"")) // 此時的 num 仍是 Object 所以加上空字串 ""
+                        .mapToInt(num -> Integer.parseInt(num+"")) // 此時的 num 仍是 Object 所以加上空字串 "", 因此 (num+"") 整體就會被看成是字串
                         .sum();
         System.out.println(sum);      
         
