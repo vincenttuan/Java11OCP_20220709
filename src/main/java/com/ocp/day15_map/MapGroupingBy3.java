@@ -22,7 +22,10 @@ public class MapGroupingBy3 {
         System.out.println(roster);
         Map<String, Optional<Employee>> m4 = roster.stream()
                                                    .collect(groupingBy(Employee::getNeighborhood, maxBy(comparing(Employee::getSalary))));
-                
         System.out.println(m4);
+        
+        Map<String, Optional<Employee>> m5 = roster.stream()
+                                                   .collect(groupingBy(Employee::getNeighborhood, maxBy((x, y) -> x.getSalary()-y.getSalary())));
+        System.out.println(m5);
     }
 }
