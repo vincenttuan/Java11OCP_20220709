@@ -25,6 +25,7 @@ public class MapDemo2 {
                       //.sorted(comparingByKey())
                       .sorted(comparingByValue())
                       //.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (o1, o2) -> o2, LinkedHashMap::new));
+                      //.collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (o1, o2) -> o2, LinkedHashMap::new));
                       .collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (o1, o2) -> o2, LinkedHashMap::new));
         // Collectors.toMap(key 值的映射函數, value 值的映射函數, 當有 key 值衝突發生的解決方法, 建構一個 Map 集合來放入所有元素)
         // (o1, o2) -> o2, LinkedHashMap::new
