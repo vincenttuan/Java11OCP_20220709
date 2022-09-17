@@ -2,9 +2,12 @@ package com.ocp.day15_map;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.mapping;
 import static java.util.stream.Collectors.summingInt;
+import static java.util.stream.Collectors.toSet;
 
 public class MapGroupingBy2 {
     public static void main(String[] args) {
@@ -29,5 +32,18 @@ public class MapGroupingBy2 {
         Map<String, Integer> result2 = fruits.stream()
                                          .collect(groupingBy(Fruit::getName, summingInt(Fruit::getQty)));
         System.out.println(result2);
+        
+        // 希望印出
+        // 29.99=[orange, watermelon], 9.99=[papaya, apple], 19.99=[banana]
+        Map<Double, List<Fruit>> result3 = fruits.stream().collect(groupingBy(Fruit::getPrice));
+        System.out.println(result3);
+        // 上述列印結果:
+        // 29.99=[Fruit{name=orange, qty=10, price=29.99}, Fruit{name=watermelon, qty=10, price=29.99}], 
+        // 9.99=[Fruit{name=apple, qty=10, price=9.99}, Fruit{name=papaya, qty=20, price=9.99}, Fruit{name=apple, qty=10, price=9.99}, Fruit{name=apple, qty=20, price=9.99}], 
+        // 19.99=[Fruit{name=banana, qty=20, price=19.99}, Fruit{name=banana, qty=10, price=19.99}]}
+        
+        Map<Double, Set<String>> result4 = fruits.stream().collect(groupingBy(Fruit::getPrice, mapping(Fruit::getName, toSet())));
+        System.out.println(result4);
+        // 29.99=[orange, watermelon], 9.99=[papaya, apple], 19.99=[banana]
     }
 }
