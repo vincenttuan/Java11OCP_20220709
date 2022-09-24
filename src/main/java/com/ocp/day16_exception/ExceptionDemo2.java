@@ -8,6 +8,8 @@ public class ExceptionDemo2 {
     public static void main(String[] args) {
         try {
             input();
+            //return; // 即使有下達 return; finally 區段還是會被執行
+            System.exit(0); // 強制結束指令, finally 區段不會執行
         } catch (InputMismatchException e) {
             System.out.println("有錯誤發生");
             System.out.println(e);
