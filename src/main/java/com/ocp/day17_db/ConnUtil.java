@@ -23,7 +23,6 @@ public class ConnUtil {
         String dbUrl = "jdbc:derby://localhost:1527/sample"; // 資料庫連線位置
         String username = "app"; // derby sample 資料庫預設登入名稱 = app
         String password = "app"; // derby sample 資料庫預設登入密碼 = app
-        String sql = "select name, password from users"; // users 資料表 sql 查詢語句
         
         return DriverManager.getConnection(dbUrl, username, password);
     }
