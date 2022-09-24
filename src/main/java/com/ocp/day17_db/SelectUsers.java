@@ -36,7 +36,7 @@ public class SelectUsers {
             stmt = conn.createStatement(); // 建立資料SQL敘述物件
             rs = stmt.executeQuery(sql); // stmt 透過 sql 將查詢的資料結果給 rs
             // 顯示 rs 資料結果
-            while (rs.next()) {
+            while (rs.next()) { // 每一筆資料透過 next() 來取得, 若回傳是 true 代表有資料, false 代表無資料
                 String name = rs.getString("name"); // 取得 name 欄位資料結果
                 String pwd = rs.getString("password"); // 取得 password 欄位資料結果
                 System.out.printf("%-5s %-5s\n", name, pwd);
