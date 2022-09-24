@@ -28,7 +28,7 @@ public class ExceptionDemo4 {
             return;
         }
         int y = scanner.nextInt();
-        
+         //---------------------------------------------------
         // 判斷 y 是否為 0 ?
         if(y == 0) {
             System.out.println("分母不可為 0");
