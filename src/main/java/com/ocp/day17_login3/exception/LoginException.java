@@ -1,4 +1,4 @@
-package com.ocp.day17_login3;
+package com.ocp.day17_login3.exception;
 
 // 自訂 Login 例外類別
 public class LoginException extends Exception {
