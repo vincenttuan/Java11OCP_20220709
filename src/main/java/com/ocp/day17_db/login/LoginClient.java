@@ -1,5 +1,6 @@
 package com.ocp.day17_db.login;
 
+import com.ocp.day17_db.exception.LoginException;
 import com.ocp.day17_db.exception.PasswordNotMatchException;
 import com.ocp.day17_db.exception.UserNotFoundException;
 import java.util.Scanner;
@@ -16,12 +17,7 @@ public class LoginClient {
         boolean result = false;
         try {
             result = loginService.login(name, password);
-        } catch (UserNotFoundException e) {
-            System.out.println("UserNotFoundException 發生");
-            // 調用 LoginException 的自定方法
-            e.printLoginErrorMessage();
-        } catch (PasswordNotMatchException e) {
-            System.out.println("PasswordNotMatchException 發生");
+        } catch (UserNotFoundException | PasswordNotMatchException e) { // 透過 | 來統一捕捉例外, 限制: 例外間不可有繼承關係
             // 調用 LoginException 的自定方法
             e.printLoginErrorMessage();
         }
