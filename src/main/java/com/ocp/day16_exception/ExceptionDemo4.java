@@ -21,6 +21,12 @@ public class ExceptionDemo4 {
         //---------------------------------------------------
         System.out.print("請輸入分母: ");
         // 請自行撰寫分母是否是數字的判斷 ?
+        data = scanner.next(); // 得到使用者所輸入的內容
+        // 判斷 data 是否都是含有數字的字串 ?
+        if(!data.matches("\\d+")) { // 正則表示式
+            System.out.println("請輸入數字"); 
+            return;
+        }
         int y = scanner.nextInt();
         
         // 判斷 y 是否為 0 ?
