@@ -25,10 +25,6 @@ public class LoginClient {
             System.out.println("PasswordNotMatchException 發生");
             // 調用 LoginException 的自定方法
             e.printLoginErrorMessage();
-        } catch (LoginException e) {
-            System.out.println("LoginException 發生");
-            // 調用 LoginException 的自定方法
-            e.printLoginErrorMessage();
         }
         return result;
     }

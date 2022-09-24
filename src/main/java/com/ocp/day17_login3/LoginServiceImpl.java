@@ -15,18 +15,18 @@ public class LoginServiceImpl implements LoginService {
     }
     
     @Override
-    public boolean login(String name, String password) throws LoginException {
+    public boolean login(String name, String password) throws UserNotFoundException, PasswordNotMatchException {
         // 1. 根據 name 來查看是否有此人 ?
         if(users.get(name) == null) { // 無此人
             // 建立一個例外
-            LoginException e1 = new UserNotFoundException(name + " 尚未建立帳號!");
+            UserNotFoundException e1 = new UserNotFoundException(name + " 尚未建立帳號!");
             throw e1; // 將例外訊息拋出
         }
         // 2. 判斷 password 是否一致?
         boolean result = users.get(name).equals(password);
         if(!result) { // password 不一致
             // 建立一個例外
-            LoginException e2 = new PasswordNotMatchException(name + " 密碼錯誤");
+            PasswordNotMatchException e2 = new PasswordNotMatchException(name + " 密碼錯誤");
             throw e2; // 將例外訊息拋出
         }
         return true; // 登入成功
