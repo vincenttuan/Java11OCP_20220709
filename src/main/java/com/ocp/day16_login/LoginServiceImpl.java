@@ -13,7 +13,11 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public boolean login(String name, String password) {
-        boolean result = users.get(name).equals(password);
+        String currentPassword = users.get(name);
+        if(currentPassword == null) {
+            return false;
+        }
+        boolean result = currentPassword.equals(password);
         return result;
     }
     
