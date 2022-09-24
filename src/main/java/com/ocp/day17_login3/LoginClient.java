@@ -1,6 +1,8 @@
 package com.ocp.day17_login3;
 
 import com.ocp.day17_login3.exception.LoginException;
+import com.ocp.day17_login3.exception.PasswordNotMatchException;
+import com.ocp.day17_login3.exception.UserNotFoundException;
 import java.util.Scanner;
 
 public class LoginClient {
@@ -15,7 +17,16 @@ public class LoginClient {
         boolean result = false;
         try {
             result = loginService.login(name, password);
+        } catch (UserNotFoundException e) {
+            System.out.println("UserNotFoundException 發生");
+            // 調用 LoginException 的自定方法
+            e.printLoginErrorMessage();
+        } catch (PasswordNotMatchException e) {
+            System.out.println("PasswordNotMatchException 發生");
+            // 調用 LoginException 的自定方法
+            e.printLoginErrorMessage();
         } catch (LoginException e) {
+            System.out.println("LoginException 發生");
             // 調用 LoginException 的自定方法
             e.printLoginErrorMessage();
         }
