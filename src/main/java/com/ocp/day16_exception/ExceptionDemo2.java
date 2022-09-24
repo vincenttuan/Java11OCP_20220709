@@ -13,7 +13,9 @@ public class ExceptionDemo2 {
             System.out.println(e);
             e.printStackTrace(System.out); // 詳細錯誤資訊
             System.out.println("請重新輸入");
-            input();
+            //input();
+        } finally {
+            System.out.println("The end.");
         }
     }
     
