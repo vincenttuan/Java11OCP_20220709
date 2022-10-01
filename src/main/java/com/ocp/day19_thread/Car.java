@@ -1,6 +1,11 @@
 package com.ocp.day19_thread;
 
-public class Car {
+public class Car extends Thread {
+    
+    @Override
+    public void run() {
+        driver();
+    }
     
     public void driver() {
         String tName = Thread.currentThread().getName();
