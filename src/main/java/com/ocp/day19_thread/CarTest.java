@@ -1,6 +1,6 @@
 package com.ocp.day19_thread;
 
-public class CatTest {
+public class CarTest {
     public static void main(String[] args) {
         Car car1 = new Car();
         Car car2 = new Car();
