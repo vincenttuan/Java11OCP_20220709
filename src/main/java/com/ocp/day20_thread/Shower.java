@@ -12,7 +12,8 @@ class Father extends Thread {
         worker.start(); // 啟動 worker 執行緒
         
         try {
-            worker.join(); // worker 的工作做完之後, 才會繼續往下做
+            worker.join(1000); // worker 的工作做完之後, 才會繼續往下做
+                               // 可以設定最大等待時間: 1000(ms) 表示 1秒 
         } catch (Exception e) {
         }
         
