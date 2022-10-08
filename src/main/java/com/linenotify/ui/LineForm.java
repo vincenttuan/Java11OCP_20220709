@@ -149,8 +149,7 @@ public class LineForm extends javax.swing.JFrame {
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, message + " 發送失敗: " + e);
-        }
-                
+        }  
     }//GEN-LAST:event_send_buttonActionPerformed
 
     /**
