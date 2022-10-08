@@ -11,7 +11,7 @@ public class MyJobs2 {
         Runnable report = () -> System.out.println("寫報告");
         Runnable drink = () -> System.out.println("喝咖啡");
         // 將所有 Runnable 放到 List 中
-        // List.of 所創建的集合是不可變集合
+        // List.of 所創建的集合是不可修改集合(unmodifiable)
         // 不可對集合元素進行排序, 元素位置調動, 新增/刪除元素
         List<Runnable> list = List.of(program, report, drink); 
         // 執行 list 中的任務
