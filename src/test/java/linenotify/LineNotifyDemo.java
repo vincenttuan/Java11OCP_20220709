@@ -13,7 +13,7 @@ public class LineNotifyDemo {
         // 1-2. 將發送的文字轉 utf-8 byte[]
         byte[] postData = ("message=" + message).getBytes("UTF-8");
         // 2. 設定存取權杖(也稱為: token)
-        String token = "你自己的 token";
+        String token = "LuH8r7TilC8hc4N1kADO7aFbV93y8uR4E77J5VxJD1m";
         // 3. 設定 Line Notify 發送中心位置
         String lineNotifyUrl = "https://notify-api.line.me/api/notify";
         //----------------------------------------------------------------
