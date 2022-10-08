@@ -6,7 +6,7 @@ import java.net.URL;
 
 public class LineService {
     // token
-    private final String token = "你自己的 token";
+    private String token = "你自己的 token";
     // line notify url
     private final String lineNotifyUrl = "https://notify-api.line.me/api/notify";
     // 傳送訊息
@@ -24,5 +24,10 @@ public class LineService {
             dos.flush(); // 提交更新
         }
         return conn.getResponseCode();
+    }
+    // 傳送訊息 II (變更 token)
+    public int sendText(String message, String token) throws Exception {
+        this.token = token;
+        return sendText(message);
     }
 }
