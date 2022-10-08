@@ -25,7 +25,7 @@ public class CallableDemo {
         // 取得考試成績
         Integer score = null;
         try {
-            score = task.get();
+            score = task.get(); // 考試成績
         } catch (InterruptedException | ExecutionException e) {
             System.out.println(e);
         }
