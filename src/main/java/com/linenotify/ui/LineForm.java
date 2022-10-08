@@ -5,8 +5,10 @@
 package com.linenotify.ui;
 
 import com.linenotify.service.LineCallable;
+import java.util.Date;
 import java.util.concurrent.FutureTask;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -147,6 +149,12 @@ public class LineForm extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(rootPane, message + " 發送失敗: " + respCode);
             }
+            // 紀錄 log 訊息
+            DefaultTableModel dm = (DefaultTableModel)log_table.getModel();
+            Object[] rowData = {
+                new Date(), respCode, message
+            };
+            dm.addRow(rowData); // 加入紀錄
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, message + " 發送失敗: " + e);
         }  
