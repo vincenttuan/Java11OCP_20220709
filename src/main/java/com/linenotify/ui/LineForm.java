@@ -4,6 +4,10 @@
  */
 package com.linenotify.ui;
 
+import com.linenotify.service.LineCallable;
+import java.util.concurrent.FutureTask;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author MB-teacher
@@ -58,6 +62,11 @@ public class LineForm extends javax.swing.JFrame {
 
         send_button.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
         send_button.setText("傳送");
+        send_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                send_buttonActionPerformed(evt);
+            }
+        });
 
         log_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -121,6 +130,28 @@ public class LineForm extends javax.swing.JFrame {
     private void token_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_token_textActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_token_textActionPerformed
+
+    private void send_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_send_buttonActionPerformed
+        // 按下按鈕所要做的事
+        String token = token_text.getText(); // 得到 ui 上的 token_text 輸入框內容
+        String message = message_text.getText(); // 得到 ui 上的 message_text 輸入框內容
+        // 建立 LineCallable 並透過執行緒發送
+        LineCallable lineCallable = new LineCallable(message, token);
+        FutureTask<Integer> task = new FutureTask<>(lineCallable);
+        new Thread(task).start();
+        // 得到回傳值
+        try {
+            int respCode = task.get();
+            if(respCode == 200) {
+                JOptionPane.showMessageDialog(rootPane, message + " 發送成功: " + respCode);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, message + " 發送失敗: " + respCode);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, message + " 發送失敗: " + e);
+        }
+                
+    }//GEN-LAST:event_send_buttonActionPerformed
 
     /**
      * @param args the command line arguments
