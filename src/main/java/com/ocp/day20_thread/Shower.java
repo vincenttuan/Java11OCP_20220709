@@ -11,6 +11,11 @@ class Father extends Thread {
         Worker worker = new Worker();
         worker.start(); // 啟動 worker 執行緒
         
+        try {
+            worker.join(); // worker 的工作做完之後, 才會繼續往下做
+        } catch (Exception e) {
+        }
+        
         System.out.println("爸爸開始洗澡");
         System.out.println("爸爸洗完澡了");
     }
@@ -19,9 +24,11 @@ class Father extends Thread {
 class Worker extends Thread {
     @Override
     public void run() {
+        System.out.println("----------------------------------");
         System.out.println("瓦斯工人送瓦斯");
         System.out.println("瓦斯工人將瓦斯送到家");
         System.out.println("瓦斯工人將瓦斯裝設完畢");
+        System.out.println("----------------------------------");
     }
 }
 
