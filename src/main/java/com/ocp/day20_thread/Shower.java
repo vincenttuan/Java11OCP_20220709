@@ -14,7 +14,8 @@ class Father extends Thread {
         try {
             worker.join(1000); // worker 的工作做完之後, 才會繼續往下做
                                // 可以設定最大等待時間: 1000(ms) 表示 1秒 
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
+            System.out.println("執行緒發生中斷: " + e);
         }
         
         System.out.println("爸爸開始洗澡");
