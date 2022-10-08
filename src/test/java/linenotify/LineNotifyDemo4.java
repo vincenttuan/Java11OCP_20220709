@@ -10,7 +10,7 @@ public class LineNotifyDemo4 {
         for(i=1;i<=20;i++) {
             Runnable r = () -> {
                 try {
-                    int respCode = lineService.sendText("大家好: " + i);
+                    int respCode = lineService.sendText("雙十節: " + i);
                     System.out.printf("第 %d 筆 回應碼: %d\n", i, respCode);
                 } catch (Exception e) {
                     e.printStackTrace();
