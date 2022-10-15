@@ -26,7 +26,7 @@ public class SumTask extends RecursiveTask<Long> {
             return sum;
         }
         // 2. 將任務一分為二的公式
-        int middle = (end - start) / 2;
+        int middle = (end + start) / 2;
         System.out.printf("分割 %d~%d ==> %d~%d, %d~%d\n", start, end, start, middle, middle, end);
         // 3. 分裂任務 (fork)
         SumTask sumTask1 = new SumTask(array, start, middle);
