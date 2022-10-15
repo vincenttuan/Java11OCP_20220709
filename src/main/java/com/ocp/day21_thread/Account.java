@@ -8,7 +8,7 @@ public class Account {
     }
     
     // 提款
-    public void withdraw(int amount) {
+    public synchronized void withdraw(int amount) {
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 得到的帳戶餘額(1): $%d\n", tName, balance);
         
@@ -18,7 +18,7 @@ public class Account {
     }
     
     // 修改餘額
-    public void setBalance(int balance) {
+    public synchronized void setBalance(int balance) {
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 修改帳戶餘額(前): $%d\n", tName, this.balance);
         this.balance = balance;
