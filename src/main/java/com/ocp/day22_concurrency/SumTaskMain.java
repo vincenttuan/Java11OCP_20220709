@@ -8,7 +8,9 @@ public class SumTaskMain {
         long[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         // forkjoin
         ForkJoinTask<Long> task = new SumTask(array, 0, array.length);
-        long result  = ForkJoinPool.commonPool().invoke(task);
+        ForkJoinPool pool = ForkJoinPool.commonPool(); // 動態使用核心數量
+        long result = pool.invoke(task);
+        System.out.printf("使用核心數量: %d\n", pool.getPoolSize());
         System.out.println(result);
     }
 }
