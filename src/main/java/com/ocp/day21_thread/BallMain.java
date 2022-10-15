@@ -15,6 +15,8 @@ public class BallMain {
     public static void main(String[] args) {
         Ball ball = new Ball();
         Thread t1 = new Thread(new Take(ball), "T1");
+        Thread t2 = new Thread(new Take(ball), "T2");
         t1.start();
+        t2.start();
     }
 }
