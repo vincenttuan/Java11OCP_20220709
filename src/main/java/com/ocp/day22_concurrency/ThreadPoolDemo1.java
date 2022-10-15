@@ -16,11 +16,11 @@ class Job implements Runnable {
 public class ThreadPoolDemo1 {
     public static void main(String[] args) {
         ExecutorService service = Executors.newCachedThreadPool();
-        service.submit(new Job());
-        service.submit(new Job());
-        service.submit(new Job());
-        service.submit(new Job());
-        service.submit(new Job());
+        service.submit(new NormalJob());
+        service.submit(new NormalJob());
+        service.submit(new NormalJob());
+        service.submit(new NormalJob());
+        service.submit(new NormalJob());
         
         // 停止服務
         service.shutdown(); // 平滑結束(會等到所有執行緒的工作都做完才會結束)

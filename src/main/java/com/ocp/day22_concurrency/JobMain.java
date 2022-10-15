@@ -8,10 +8,10 @@ public class JobMain {
     public static void main(String[] args) throws Exception {
         ExecutorService service = Executors.newCachedThreadPool();
         service.submit(new LongJob());
-        service.submit(new Job());
-        service.submit(new Job());
+        service.submit(new NormalJob());
+        service.submit(new NormalJob());
         service.submit(new LongJob());
-        service.submit(new Job());
+        service.submit(new NormalJob());
         
         service.shutdown();
         //service.shutdownNow();
