@@ -1,6 +1,7 @@
 package com.ocp.day22_concurrency;
 
 import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -9,6 +10,10 @@ class PlayJob implements Runnable {
     @Override
     public void run() {
         System.out.print("開始: " + new Date());
+        try {
+            Thread.sleep(new Random().nextInt(3000)); // 模擬工作時間
+        } catch (Exception e) {
+        }
         System.out.print(" [ Play Job ] ");
         System.out.println("結束: " + new Date());
     }
