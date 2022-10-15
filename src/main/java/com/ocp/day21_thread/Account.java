@@ -6,7 +6,8 @@ public class Account {
     public Account(int balance) {
         this.balance = balance;
     }
-
+    
+    // 提款
     public void withdraw(String amount) {
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 得到的帳戶餘額(1): $%d\n", tName, balance);
@@ -14,6 +15,11 @@ public class Account {
         for(int i=0;i<=2100000000;i++); // 模擬延遲
         
         System.out.printf("%s 得到的帳戶餘額(2): $%d\n", tName, balance);
+    }
+    
+    // 修改餘額
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
     
 }
