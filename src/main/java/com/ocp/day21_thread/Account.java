@@ -8,7 +8,7 @@ public class Account {
     }
     
     // 提款
-    public void withdraw(String amount) {
+    public void withdraw(int amount) {
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 得到的帳戶餘額(1): $%d\n", tName, balance);
         
