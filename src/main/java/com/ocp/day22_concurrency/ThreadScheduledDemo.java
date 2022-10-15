@@ -27,6 +27,7 @@ public class ThreadScheduledDemo {
         int delayTime = 1; // 停 1 秒
         int peroidTime = 2; // 間隔 2 秒
         // 1 秒鐘後開始 [執行 MyJob 工作] 間隔 2 秒 [執行 MyJob 工作] 間隔 2 秒 [執行 MyJob 工作] ...
-        service.scheduleWithFixedDelay(new PlayJob(), delayTime, peroidTime, TimeUnit.SECONDS);
+        //service.scheduleWithFixedDelay(new PlayJob(), delayTime, peroidTime, TimeUnit.SECONDS); // 固定延遲
+        service.scheduleAtFixedRate(new PlayJob(), delayTime, peroidTime, TimeUnit.SECONDS); // 固定速度
     }
 }
