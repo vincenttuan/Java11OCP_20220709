@@ -1,5 +1,31 @@
 package com.ocp.day21_thread;
 
+class Eat implements Runnable {
+    private Cookie cookie;
+    public Eat(Cookie cookie) {
+        this.cookie = cookie;
+    }
+    @Override
+    public void run() {
+        for(int i=1;i<=10;i++) {
+            cookie.eat(i);
+        }
+    }
+}
+
+class Put implements Runnable {
+    private Cookie cookie;
+    public Put(Cookie cookie) {
+        this.cookie = cookie;
+    }
+    @Override
+    public void run() {
+        for(int i=1;i<=10;i++) {
+            cookie.put(i);
+        }
+    }
+}
+
 public class Cookie {
     
     public void eat(int i) { // 吃餅乾程序
