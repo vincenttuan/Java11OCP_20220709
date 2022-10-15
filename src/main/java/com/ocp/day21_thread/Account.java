@@ -19,7 +19,10 @@ public class Account {
     
     // 修改餘額
     public void setBalance(int balance) {
+        String tName = Thread.currentThread().getName();
+        System.out.printf("%s 修改帳戶餘額(前): $%d\n", tName, this.balance);
         this.balance = balance;
+        System.out.printf("%s 修改帳戶餘額(後): $%d\n", tName, this.balance);
     }
     
 }
