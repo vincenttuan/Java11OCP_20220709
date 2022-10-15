@@ -27,15 +27,31 @@ class Put implements Runnable {
 }
 
 public class Cookie {
-    
-    public void eat(int i) { // 吃餅乾程序
+    private boolean empty = true; // 放餅乾的盤子
+    public synchronized void eat(int i) { // 吃餅乾程序
+        if(empty) {
+            try {
+                wait(); // 等待
+            } catch (Exception e) {
+            }
+        }
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 吃了第 %d 塊餅乾\n", tName, i);
+        empty = true; // 餅乾吃光了
+        notify(); // 呼叫主人放餅乾
     }
     
-    public void put(int i) { // 放餅乾程序
+    public synchronized void put(int i) { // 放餅乾程序
+        if(!empty) {
+            try {
+                wait(); // 等待
+            } catch (Exception e) {
+            }
+        }
         String tName = Thread.currentThread().getName();
         System.out.printf("%s 放了第 %d 塊餅乾\n", tName, i);
+        empty = false; // 盤子內有餅乾
+        notify(); // 呼叫小狗吃餅乾
     }
     
 }
