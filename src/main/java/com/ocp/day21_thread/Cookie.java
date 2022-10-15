@@ -36,7 +36,7 @@ public class Cookie {
             }
         }
         String tName = Thread.currentThread().getName();
-        System.out.printf("%s 吃了第 %d 塊餅乾\n", tName, i);
+        System.out.printf("%s 吃了第 %2d 塊餅乾\n", tName, i);
         empty = true; // 餅乾吃光了
         notify(); // 呼叫主人放餅乾
     }
@@ -49,7 +49,7 @@ public class Cookie {
             }
         }
         String tName = Thread.currentThread().getName();
-        System.out.printf("%s 放了第 %d 塊餅乾, ", tName, i);
+        System.out.printf("%s 放了第 %2d 塊餅乾, ", tName, i);
         empty = false; // 盤子內有餅乾
         notify(); // 呼叫小狗吃餅乾
     }
