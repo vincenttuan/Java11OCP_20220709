@@ -16,6 +16,7 @@ public class FileReaderDemo {
             // fr.read(buffer) 將每次讀取道的字元放入到 buffer 中
             // 若返回 -1 表示讀到檔尾
             while (fr.read(buffer) != -1) {                
+                //System.out.print((int)buffer[0]); // 印出 buffer 內容的 ASCII
                 System.out.print(buffer); // 印出 buffer 內容
             }
         } catch(IOException e) {
