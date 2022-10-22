@@ -18,7 +18,7 @@ public class FilesWalkDemo {
         files.forEach(fileName -> {
             try {
                 Path currentPath = fileName.toAbsolutePath();
-                if(fileName.getFileName().toString().contains(".java")) {
+                if(fileName.getFileName().toString().endsWith(".java")) {
                     System.out.print(++count + ". " + fileName + " : ");
                     System.out.println(Files.readAttributes(path, BasicFileAttributes.class).creationTime());
                 }
