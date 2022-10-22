@@ -18,6 +18,7 @@ public class FileWriterDemo {
             System.out.println("寫入成功");
             //fw.close(); // 因為使用 try() 所以可以不用寫
         } catch(IOException e) {
+            System.out.println(e);
         }
     }
 }
