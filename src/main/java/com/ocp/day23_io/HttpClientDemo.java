@@ -24,11 +24,8 @@ public class HttpClientDemo {
 
         try {
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            String res = new StringBuilder("status: ")
-                    .append(response.statusCode())
-                    .append("\nbody: ")
-                    .append(response.body()).toString();
-            System.out.println(res);
+            System.out.println("回應碼: " + response.statusCode());
+            System.out.println("內容: " + response.body().toString());
         } catch (Exception ex) {
             System.out.println(ex);
         }
